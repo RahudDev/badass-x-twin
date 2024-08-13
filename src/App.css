@@ -1,0 +1,250 @@
+body {
+  font-family: Arial, sans-serif;
+}
+
+h1, h2, h5 {
+  color: #333;
+}
+
+.nav-link {
+  font-weight: bold;
+}
+
+
+.card {
+  margin-bottom: 1rem;
+}
+
+.navbar {
+  font-size: 15px;
+}
+.navbar-brand {
+  font-size: 25px;
+}
+
+main {
+  padding: 2rem 0;
+}
+
+footer p {
+  margin: 0;
+}
+
+.jumbotron {
+  color: rgb(19, 18, 18);
+}
+
+#sidebar-wrapper {
+  width: 250px;
+  height: 100%;
+}
+
+.sidebar-heading {
+  padding: 1rem;
+  font-size: 1.2rem;
+}
+
+.list-group-item {
+  padding: 1rem 1.5rem;
+}
+
+/* Landing Page Styles */
+
+/* App Container Styles */
+.app-container {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh; /* Ensures the container takes up the full height of the viewport */
+  margin: 0;
+  transition: margin-right 0.9s ease-in-out;
+}
+
+.app-container.shrink {
+  margin-right: 25%; /* Adjust the margin when the chat panel is open */
+}
+
+/* Header Styles */
+.navbar {
+  width: 100%;
+  transition: width 0.9s ease-in-out;
+}
+
+.app-container.shrink .navbar {
+  width: 100%;
+}
+
+/* Content Styles */
+.content {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.page-content {
+  padding: 20px;
+}
+
+/* Footer Styles */
+footer {
+  position: relative;
+  width: 100%;
+  padding: 1rem;
+  text-align: center;
+  font-style :italic;
+  color : white;
+  font-weight: bolder;
+}
+
+/* Chat Panel Styles */
+.chat-panel {
+  position: fixed;
+  right: -100%;
+  top: 0;
+  width: 25%; /* Fixed width for a square look */
+  height: 100%;
+  background-color: #ffffff; /* Initial background color */
+  border-left: 2px solid #007bff; /* Blue border for contrast */
+  border-radius: 0 0 0 0; /* Rounded left corners */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Initial shadow */
+  display: flex;
+  flex-direction: column;
+  transition: right 0.9s ease-in-out, transform 0.9s ease-in-out;
+  transform: translateX(100%); /* Initial off-screen position */
+  animation: colorChange 5s infinite, shadowPulse 2s infinite; /* Apply animations */
+}
+
+.chat-panel.open {
+  right: 0;
+  transform: translateX(0);
+}
+
+.chat-messages {
+  flex: 1;
+  overflow-y: auto;
+  padding: 10px;
+  border-bottom: 1px solid #ddd; /* Border to separate messages from input */
+}
+
+.chat-panel input {
+  border: 1px solid #ccc;
+  padding: 10px;
+  width: calc(100% - 62px); /* Adjusted width to fit button */
+  border-radius: 4px 0 0 4px; /* Rounded corners on the input */
+  margin: 0; /* Removed margin to align properly */
+}
+
+.chat-panel Button {
+  width: 60px; /* Slightly larger button */
+  border: 1px solid #ccc;
+  background-color: #007bff;
+  color: white;
+  cursor: pointer;
+  border-radius: 0 4px 4px 0; /* Rounded corners on the right side */
+  padding: 10px;
+  
+}
+
+.input-container {
+  display: flex;
+  border-top: 1px solid #ddd; /* Border to separate from messages */
+  padding: 10px;
+}
+
+.input-container input {
+  border: 1px solid #ccc;
+  padding: 10px;
+  flex: 1; /* Takes up remaining space */
+  border-radius: 4px 0 0 4px; /* Rounded corners on the input */
+  margin: 0; /* Removed margin to align properly */
+}
+
+.input-container button {
+  border: 1px solid #ccc;
+  background-color: #007bff;
+  color: white;
+  cursor: pointer;
+  border-radius: 0 4px 4px 0; /* Rounded corners on the right side */
+  padding: 10px;
+  margin-left: 10px; /* Space between input and button */
+}
+
+.close-btn {
+  align-self: flex-end;
+  margin: 10px;
+  background-color: #ff4d4d; /* Softer red */
+  color: rgb(224, 217, 217);
+  border: none; /* Remove border for a cleaner look */
+  font-size: 1.25rem; /* Larger close button */
+  border-radius: 50%; /* Circular close button */
+  width: 40px; /* Circular button size */
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+
+
+/* Animation Styles */
+@keyframes colorChange {
+  0% { background-color: #ffffff; }
+  25% { background-color: #f9f9f9; }
+  50% { background-color: #e0e0e0; }
+  75% { background-color: #d1d1d1; }
+  100% { background-color: #ffffff; }
+}
+
+@keyframes shadowPulse {
+  0% { box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); }
+  50% { box-shadow: 0 8px 16px rgba(0, 0, 0, 0.4); }
+  100% { box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); }
+}
+
+.chat-transition-enter {
+  transform: translateX(100%);
+}
+
+.chat-transition-enter-active {
+  transform: translateX(0);
+  transition: transform 900ms ease-in-out;
+}
+
+.chat-transition-exit {
+  transform: translateX(0);
+}
+
+.chat-transition-exit-active {
+  transform: translateX(100%);
+  transition: transform 900ms ease-in-out;
+}
+
+
+
+/* Media query for mobile view */
+@media (max-width: 768px) {
+  .chat-panel {
+    width: 100%;
+    right: -100%;
+  }
+
+  .chat-panel.open {
+    right: 0;
+  }
+
+  .app-container.shrink {
+    margin-right: 0;
+  }
+
+  .app-container.shrink .navbar {
+    width: 100%;
+  }
+
+
+.chat-panel input {
+  width: calc(100% - 80%); /* Adjusted for mobile view */
+}
+
+.chat-panel button {
+  width: 10% /* Larger button on mobile */
+}
+}

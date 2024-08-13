@@ -1,0 +1,117 @@
+@keyframes dropIn {
+    from {
+      opacity: 0;
+      transform: translateY(-50px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  .drop-in {
+    animation: dropIn 1s ease-out forwards;
+    opacity: 0; /* Start with invisible text */
+  }
+  
+  .delay-1 {
+    animation-delay: 0.5s;
+  }
+  
+  .delay-2 {
+    animation-delay: 1s;
+  }
+  
+  /* Additional styles for the landing page */
+  body {
+    font-family: Arial, sans-serif;
+  }
+  
+  h1, h2, h5 {
+    color: #333;
+  }
+  
+  .nav-link {
+    font-weight: bold;
+  }
+  
+  .card {
+    margin-bottom: 1rem;
+  }
+  
+  main {
+    padding: 2rem 0;
+  }
+  
+  footer p {
+    margin: 0;
+  }
+  .container{
+    position: relative;
+  }
+  
+  .jumbotron {
+    color: rgb(7, 7, 7);
+  }
+  
+  #sidebar-wrapper {
+    width: 250px;
+    height: 100%;
+  }
+  
+  .sidebar-heading {
+    padding: 1rem;
+    font-size: 1.2rem;
+  }
+  
+  .list-group-item {
+    padding: 1rem 1.5rem;
+  }
+  
+  /* Landing Page Styles */
+  .landing-page {
+    color: rgb(241, 238, 238);
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    overflow-x: hidden;
+    overflow-y: hidden;
+  }
+  
+  .landing-page .container {
+    text-align: center;
+  }
+  
+  .landing-page .display-4 {
+    font-size: 3.5rem;
+    margin-bottom: 1rem;
+  }
+  
+  .landing-page .lead {
+    font-size: 1.5rem;
+    margin-bottom: 2rem;
+    color : black;
+  }
+  
+  .landing-page .btn-primary {
+    padding: 0.75rem 1.5rem;
+    font-size: 1.25rem;
+  }
+
+  .section-container2 {
+    width: 100%;
+    max-width: 100%;
+    margin: 0 auto;
+    padding: 0 15px;
+  }
+  
+  /* Space between sections */
+  .section-container2:not(:last-child) {
+    margin-bottom: 150px; /* Adds space between sections */
+  }
+
+  
+  
+  @media (max-width: 767px) {
+    .how-it-works, .user-reviews {
+      padding: 0 15px;
+    }
+  }

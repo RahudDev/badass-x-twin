@@ -1,0 +1,87 @@
+/* src/components/HowItWorks.css */
+.how-it-works {
+  opacity: 0;
+  transform: translateX(100%);
+  transition: opacity 0.7s ease-out, transform 0.7s ease-out;
+  width: 100%;
+  max-width: 100%;
+  padding: 0;
+
+}
+
+.how-it-works.visible {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+.container-how {
+  max-width: 100%;
+  padding: 0 0px;
+}
+
+.card2-img-top {
+  max-height: 150px;
+  object-fit: contain;
+}
+
+.card-2 {
+  border: none;
+  box-shadow: none;
+  margin: 70px;
+  margin-bottom: 15px;
+}
+
+.card-title {
+  margin-bottom: 10px; /* Adds space between h5 and p */
+  color : black;
+}
+
+.card2-text {
+  margin-top: 5px;
+  color : black;
+}
+
+/* Arrow Styles */
+.arrow-right {
+  width: 0;
+  height: 0;
+  border-top: 15px solid transparent;
+  border-bottom: 15px solid transparent;
+  border-left: 15px solid black; /* Black color for arrow */
+  position: absolute;
+  top: 50%;
+  right: -15px; /* Adjust to position the arrow */
+  transform: translateY(-50%);
+}
+
+@media (max-width: 800px) {
+  .how-it-works {
+    transform: translateX(50%);
+  }
+
+  .how-it-works.visible {
+    transform: translateX(0);
+  }
+
+  .card-title {
+    font-size: 1.5rem;
+    margin-bottom: 8px; /* Adjusted for smaller screens */
+    color : black;
+  }
+
+  .card2-text {
+    font-size: 0.8rem;
+    margin-top: 0px; /* Adjusted for smaller screens */
+  }
+
+  .arrow-right {
+    border-bottom: 15px;
+    border-top: 15px solid black;
+    border-right: 15px solid transparent;
+    border-left: 15px solid transparent;
+    top: auto;
+    bottom: -15px; /* Position arrow below the card */
+    right: 50%;
+    transform: translateX(50%);
+  }
+}

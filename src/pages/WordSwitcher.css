@@ -1,0 +1,9 @@
+/* src/components/WordSwitcher.css */
+.word-switcher {
+  display: inline;
+  font-size: 1.3em;
+  font-weight: bold;
+  position: relative;
+  padding-bottom: 5px; /* Adjust padding if needed */
+  color : #1d4e83;
+}

@@ -1,0 +1,68 @@
+/* src/components/AboutUs.css */
+.about-us-container {
+  padding: 60px 20px;
+  background-color: #f9f9f9;
+}
+
+.about-us-title {
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+  color: #333;
+  text-align: center;
+}
+
+.about-us-subtitle {
+  font-size: 2rem;
+  margin-top: 40px;
+  margin-bottom: 20px;
+  color: #333;
+}
+
+.about-us-text {
+  font-size: 1.1rem;
+  line-height: 1.6;
+  margin-bottom: 15px;
+  color: #555;
+}
+
+.about-us-list {
+  list-style-type: disc;
+  margin-left: 20px;
+}
+
+.about-us-list li {
+  font-size: 1.1rem;
+  line-height: 1.6;
+  margin-bottom: 10px;
+  color: #555;
+}
+
+.about-us {
+  box-shadow: none;
+  margin: 0 auto;
+  border-radius: 0px;
+}
+
+
+.about-us.animate-slide {
+    animation: slideIn 1s forwards;
+  }
+  
+  @keyframes slideIn {
+    0% {
+      transform: translateX(100%);
+      opacity: 0;
+    }
+    100% {
+      transform: translateX(0);
+      opacity: 1;
+    }
+  }
+  
+  .about-us:nth-child(2) {
+    animation-delay: 0.5s; /* Delay for second card */
+  }
+  
+  .about-us:nth-child(3) {
+    animation-delay: 1s; /* Delay for third card */
+  }

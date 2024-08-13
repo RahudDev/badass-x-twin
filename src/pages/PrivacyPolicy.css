@@ -1,0 +1,71 @@
+.container-privacy {
+  padding: 20px 20px;
+  background-color: #f9f9f9;
+}
+
+.privacy-us-title {
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+  color: #333;
+  text-align: center;
+}
+
+.privacy-us-subtitle {
+  font-size: 2rem;
+  margin-top: 40px;
+  margin-bottom: 20px;
+  color: #333;
+}
+
+.privacy-us-text {
+  font-size: 1.1rem;
+  line-height: 1.6;
+  margin-bottom: 15px;
+  color: #555;
+}
+
+.privacy-us-list {
+  list-style-type: disc;
+  margin-left: 20px;
+}
+
+.privacy-us-list li {
+  font-size: 1.1rem;
+  line-height: 1.6;
+  margin-bottom: 10px;
+  color: #555;
+}
+
+.privacy {
+  box-shadow: none;
+  margin: 0 auto;
+  border-radius: 0px;
+}
+
+
+@keyframes centerOut {
+  0% {
+    opacity: 0;
+    transform: scale(0.5);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+.privacy.animate-center-out {
+  animation: centerOut 0.5s ease-in-out forwards;
+  opacity: 0; /* Start with invisible state */
+  transform: scale(0.5); /* Start with smaller scale */
+  margin: 0 auto;
+  background-color: #fff;
+  border-radius: 0px;
+  box-shadow: none;
+}
+
+@media (max-width: 767px) {
+  .privacy {
+    max-width: 99%;
+  }
+}

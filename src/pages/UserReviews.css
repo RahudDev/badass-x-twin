@@ -1,0 +1,77 @@
+/* src/components/UserReviews.css */
+.user-reviews-slider {
+  overflow: hidden;
+  width : 100%;
+  max-width: 100%;
+  margin : 0 auto;
+  padding: 0;
+}
+
+.user-reviews-slider .container {
+  max-width: 100%;
+  padding : 0 15px;
+}
+
+.container-review {
+  max-width: 100%;
+  padding: 0 0px;
+}
+
+.slider-wrapper {
+  display: flex;
+  flex-wrap: nowrap;
+  overflow: hidden;
+  max-width: 100%;
+}
+
+.slider-content {
+  display: flex;
+  flex-wrap: nowrap;
+  max-width: 100%;
+  width: 100%;
+}
+
+.user-review-slide {
+  flex: 0 0 auto;
+  width: 100%;
+  max-width: 400px;
+  margin-right: 20px;
+  margin-right: 20px;
+  opacity: 0.9;
+  transition: transform 0.3s ease;
+}
+
+.user-review-slide:hover {
+  transform: scale(1.05);
+  opacity: 1;
+}
+
+.user-review-card {
+  background-color: #f8f9fa;
+  border-radius: 10px;
+}
+
+.user-reviews-heading {
+  font-size: 2.5rem;
+  font-weight: bold;
+  text-align: center;
+  margin : 0 auto;
+}
+
+.user-review-name {
+  font-size: 1.25rem;
+  font-weight: bold;
+}
+
+.user-review-content {
+  margin-top: 10px;
+}
+
+.user-review-stars {
+  color: gold;
+  margin-top: 10px;
+}
+
+.user-review-star {
+  font-size: 1.5rem;
+}

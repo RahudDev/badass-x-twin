@@ -1,0 +1,38 @@
+/* src/components/SignUp.css */
+
+@keyframes centerOut {
+  0% {
+    opacity: 0;
+    transform: scale(0.5);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+.login {
+  animation: centerOut 0.5s ease-in-out forwards;
+  opacity: 0; /* Start with invisible state */
+  transform: scale(0.5); /* Start with smaller scale */
+  margin: 0 auto;
+  background-color: #fff;
+  border-radius: 0px;
+  box-shadow: none;
+}
+
+.password-toggle2 {
+  position: absolute;
+  right: 1rem;
+  top: 55%;
+  transform: translateY(-50%);
+  background: transparent;
+  border: none;
+  cursor: pointer;
+}
+
+@media (max-width: 767px) {
+  .login {
+    max-width: 100%;
+  }
+}
